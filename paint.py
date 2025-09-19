@@ -40,7 +40,10 @@ def circle(start, end):
     """Draw circle from start to end."""
     up()
     radius = abs(end.y-start.y)/2
+    if(radius<8):
+        radius = abs(end.x-start.x)/2
     perim = 3.14*2*radius
+
     goto(start.x, start.y - 2*radius)
     down()
     begin_fill()
