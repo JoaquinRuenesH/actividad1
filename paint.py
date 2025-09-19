@@ -38,19 +38,19 @@ def square(start, end):
 
 def circle(start, end):
     """Draw circle from start to end."""
-    # TODO
-    '''
     up()
-    goto(start.x, start.y)
+    radius = abs(end.y-start.y)/2
+    perim = 3.14*2*radius
+    goto(start.x, start.y - 2*radius)
     down()
     begin_fill()
 
-    for count in range(4):
-        forward(end.x - start.x)
-        left(90)
+    for count in range(360):
+        forward(perim/360)
+        left(1)
 
     end_fill()
-'''
+
 
 def rectangle(start, end):
     """Draw rectangle from start to end."""
